@@ -1,0 +1,60 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOIipJZE0jBMl8dDX1t6CMp"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RynvPbEC5EyB",
+        "outputId": "68a38547-f4fb-454f-e37c-f22f5cda2954"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[ 4. -3.]\n",
+            " [-2.  1.]]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "def matrix_cofactor(matrix):\n",
+        "\n",
+        "\ttry:\n",
+        "\t\tdeterminant = np.linalg.det(matrix)\n",
+        "\t\tif(determinant!=0):\n",
+        "\t\t\tcofactor = None\n",
+        "\t\t\tcofactor = np.linalg.inv(matrix).T * determinant\n",
+        "\t\t\t# return cofactor matrix of the given matrix\n",
+        "\t\t\treturn cofactor\n",
+        "\t\telse:\n",
+        "\t\t\traise Exception(\"singular matrix\")\n",
+        "\texcept Exception as e:\n",
+        "\t\tprint(\"could not find cofactor matrix due to\",e)\n",
+        "\n",
+        "print(matrix_cofactor([[4, 2], [3, 5]]))\n",
+        "\n"
+      ]
+    }
+  ]
+}
