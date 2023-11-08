@@ -1,0 +1,63 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNlUj0lXnR2raN8Vidl9C0o"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "qJuZo4vl1Sxc"
+      },
+      "outputs": [],
+      "source": [
+        "import sympy"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# find the reduced row echelon form\n",
+        "sympy.Matrix([[4,0,1],[2,0,2],[3,0,3]]).rref()\n",
+        "print(\"Row Echelon form :\",sympy.Matrix([[4,0,1],[2,0,2],[3,0,3]]).rref())\n",
+        "\n",
+        "# find the rank of matrix\n",
+        "print(\"Rank of matrix :\",sympy.Matrix([[4,0,1],[2,0,2],[3,0,3]]).rank())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0e_eSl3y1jSl",
+        "outputId": "5c96958c-2e03-491b-df0a-4e6f2fb9237f"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Row Echelon form : (Matrix([\n",
+            "[1, 0, 0],\n",
+            "[0, 0, 1],\n",
+            "[0, 0, 0]]), (0, 2))\n",
+            "Rank of matrix : 2\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
